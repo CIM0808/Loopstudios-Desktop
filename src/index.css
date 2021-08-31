@@ -1,13 +1,155 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Font Families */
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+#root {
+  font-size: 15px;
+  font-family: 'Alata', sans-serif;  /* body font-family */
+  /* 'Josefin Sans', sans-serif --- header font-family   */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px hsl(0, 0%, 41%);
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav styles */
+
+nav ul li a {
+  color: hsl(0, 0%, 100%);
+}
+
+
+/* Sect1 styles */
+
+.sect1-bg {
+  max-width: 1440px;
+  background: url(../src/assets/images/desktop/image-hero.jpg) no-repeat center center;
+  background-size: cover;
+  height: 650px;
+}
+
+.sect1-text {
+  width: 60%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  font-size: 450%;
+  text-transform: uppercase;
+  margin-top: 8rem;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: -2px;
+  line-height: 60px;
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .sect1-text {
+      width: 100%;
+      line-height: 70px;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1330px) {
+  .sect1-text {
+    width: 80%;
+    line-height: 65px;
+  }
+}
+
+
+/* Sect2 styles */
+
+.sect2-bg {
+  position: relative;
+  height: 650px;
+}
+
+.sect2-img {
+  position: absolute;
+  width: auto;
+  bottom: 0;
+  left: 0;
+}
+
+.sect2-header {
+  color: hsl(0, 0%, 0%);
+}
+
+.sect2-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 55%;
+  background-color: white;
+  padding: 5rem 2.5rem 0 ;
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .sect2-text, .sect2-img {
+    position: unset;
+    width: 100%;
+    padding: 0;
+  }
+
+  .sect2-text {
+    margin-top: 1.5rem;
+  }
+
+  .sect2-img img {
+    width: 100%;
+  }
+}
+
+
+/* Sect3 styles */
+
+.sect3-header {
+  color: hsl(0, 0%, 0%);
+}
+
+.custom-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0;
+  border-radius: 0;
+}
+
+.custom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .05) , rgba(0, 0, 0, .7));
+}
+
+.sect3-img-text {
+  letter-spacing: 2px;
+  text-shadow: 0 0 3px hsl(0, 0%, 41%);
+}
+
+
+/* Footer styles */
+
+footer {
+  background-color: black;
+  margin-top: 150px;
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .tab-footer {
+    width: 100%;
+  }
 }
